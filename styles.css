@@ -314,7 +314,7 @@ MIDDLE INDEX
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   font-family: caviar;
 }
 .about-me-content-school h2,
@@ -325,7 +325,14 @@ MIDDLE INDEX
 .about-me-content-school,
 .about-me-content-school-projects {
   font-size: 12px;
+  margin-bottom: 200px;
 }
+
+.about-me-content-school h2,
+.about-me-content-school-projects h2 {
+  margin: 20px auto;
+}
+
 .about-me-content-school ul,
 .about-me-content-school h2,
 .about-me-content-school-projects ul,
@@ -521,6 +528,8 @@ Simple Page
   .about-me-content-school,
   .about-me-content-school-projects {
     font-size: 14px;
+    height: 100vh;
+    margin-bottom: 0px;
   }
   .about-me-h1-container h1 {
     font-size: 5rem;
