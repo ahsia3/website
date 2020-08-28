@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./images/Cat.png" />
+    <title>Anthony Hsia</title>
+</head>
+
+<body>
+    <div class="header-index">
+        <video autoplay muted loop id="myVideo">
+            <source src="./images/video_edit.mp4" type="video/mp4">
+        </video>
+        <div class="logo-container">
+            <svg id="logo" width="667" height="97" viewBox="0 0 700 97" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                <path
+                    d="M34.5226 1.104C29.6266 1.104 25.1146 5.184 20.9866 13.344C17.5306 19.968 13.3066 32.88 8.31456 52.08C3.22656 71.664 0.682556 84.864 0.682556 91.68C0.682556 94.464 2.31456 95.856 5.57856 95.856C8.84256 95.856 10.6666 94.944 11.0506 93.12C14.1226 71.328 16.4746 59.664 18.1066 58.128C18.4906 57.744 19.7386 57.552 21.8506 57.552C23.4826 57.552 27.7546 57.936 34.6666 58.704C41.1946 59.472 45.0346 60.192 46.1866 60.864C46.9546 61.344 48.4906 67.68 50.7946 79.872L52.9546 90.96C53.3386 92.784 54.1066 94.128 55.2586 94.992C56.5066 95.76 57.8986 96.144 59.4346 96.144C61.9306 96.144 63.4666 95.568 64.0426 94.416C64.6186 93.168 64.8106 92.016 64.6186 90.96C58.8586 57.648 52.9546 33.12 46.9066 17.376C44.4106 11.04 42.2986 6.672 40.5706 4.272C39.0346 2.16 37.0186 1.104 34.5226 1.104ZM33.9466 17.088C35.5786 17.088 37.6906 21.744 40.2826 31.056C42.8746 40.272 44.1706 45.552 44.1706 46.896C44.1706 48.048 44.0746 48.816 43.8826 49.2C43.6906 49.392 42.9706 49.488 41.7226 49.488C39.0346 49.488 35.2906 49.2 30.4906 48.624C25.2106 48.048 22.1866 47.376 21.4186 46.608C21.2266 46.416 21.1306 46.08 21.1306 45.6C21.1306 43.488 22.9066 38.256 26.4586 29.904C30.1066 21.36 32.6026 17.088 33.9466 17.088Z"
+                    stroke="black" stroke-width="5" stroke-linecap="square" />
+                <path
+                    d="M84.0991 51.072C92.0671 60.096 99.6991 71.52 106.995 85.344C107.283 85.824 107.859 86.88 108.723 88.512C109.587 90.144 110.835 91.968 112.467 93.984C113.811 95.616 115.683 96.432 118.083 96.432C122.115 96.432 124.131 93.936 124.131 88.944L123.411 35.376C123.411 33.744 122.883 32.4 121.827 31.344C120.771 30.192 119.619 29.616 118.371 29.616C115.203 29.616 113.235 31.44 112.467 35.088V36.24L113.187 48.048C113.763 56.976 114.099 67.344 114.195 79.152C109.395 69.072 102.483 58.464 93.4591 47.328C89.7151 42.528 86.8351 39.216 84.8191 37.392C82.8031 35.472 81.0751 34.512 79.6351 34.512C76.9471 34.512 75.2191 35.808 74.4511 38.4C73.9711 40.416 73.7311 43.2 73.7311 46.752V51.504L72.5791 91.824C72.6751 93.072 73.1551 94.128 74.0191 94.992C74.9791 95.76 76.0351 96.144 77.1871 96.144C80.1631 96.144 81.8431 94.848 82.2271 92.256C82.3231 91.872 82.3711 90.864 82.3711 89.232L84.0991 51.072Z"
+                    stroke="black" stroke-width="5" stroke-linecap="square" />
+                <path
+                    d="M175.025 38.544C184.049 38.544 188.561 36.576 188.561 32.64C188.561 30.72 187.265 29.472 184.673 28.896L139.745 30.336C138.401 30.432 137.153 31.056 136.001 32.208C134.945 33.36 134.417 34.512 134.417 35.664C134.417 38.16 135.905 39.408 138.881 39.408C144.161 39.408 150.017 39.168 156.449 38.688C155.873 45.312 155.585 53.904 155.585 64.464C155.585 73.296 155.729 82.464 156.017 91.968C156.017 94.656 157.265 96 159.761 96C161.201 96 162.497 95.568 163.649 94.704C164.897 93.744 165.521 92.592 165.521 91.248C165.521 87.792 165.473 85.104 165.377 83.184L165.233 72.384L165.521 38.256L175.025 38.544Z"
+                    stroke="black" stroke-width="5" stroke-linecap="square" />
+                <path
+                    d="M241.076 35.376C241.172 33.936 240.884 32.592 240.212 31.344C239.54 30.096 238.532 29.472 237.188 29.472C235.652 29.472 234.26 29.904 233.012 30.768C231.764 31.632 231.14 32.736 231.14 34.08C231.14 44.64 231.284 52.608 231.572 57.984H227.108C226.82 57.984 224.996 58.032 221.636 58.128C218.276 58.224 213.764 57.792 208.1 56.832L208.388 34.224C208.388 32.112 207.14 31.056 204.644 31.056C203.204 31.056 201.908 31.488 200.756 32.352C199.604 33.12 198.98 34.08 198.884 35.232L198.308 59.28L198.164 66.48C198.164 73.776 198.692 82.416 199.748 92.4C199.844 93.36 200.276 94.224 201.044 94.992C201.812 95.664 202.772 96 203.924 96C205.268 96 206.516 95.616 207.668 94.848C208.82 94.08 209.348 92.976 209.252 91.536C208.484 78.192 208.1 70.896 208.1 69.648V66.624C215.492 67.392 221.3 67.776 225.524 67.776C227.636 67.776 229.652 67.68 231.572 67.488C231.572 79.2 231.38 87.312 230.996 91.824C230.9 94.608 232.484 96 235.748 96C239.204 96 240.932 93.312 240.932 87.936L241.076 66.624V35.376Z"
+                    stroke="black" stroke-width="5" stroke-linecap="square" />
+                <path
+                    d="M281.667 30.192C272.547 30.192 265.395 32.736 260.211 37.824C255.123 42.912 252.579 50.352 252.579 60.144C252.579 70.032 255.123 78.48 260.211 85.488C265.299 92.4 271.875 95.856 279.939 95.856C287.427 95.856 293.523 92.4 298.227 85.488C303.027 78.48 305.427 70.272 305.427 60.864C305.427 51.456 303.267 44.016 298.947 38.544C294.627 32.976 288.867 30.192 281.667 30.192ZM280.947 85.344C275.283 85.344 270.771 82.656 267.411 77.28C264.147 72 262.515 66.192 262.515 59.856C262.515 53.52 264.051 48.672 267.123 45.312C270.195 41.856 274.515 40.128 280.083 40.128C285.555 40.128 289.395 41.904 291.603 45.456C293.907 48.912 295.059 54.576 295.059 62.448C295.059 70.224 293.139 76.464 289.299 81.168C286.995 83.952 284.211 85.344 280.947 85.344Z"
+                    stroke="black" stroke-width="5" stroke-linecap="square" />
+                <path
+                    d="M328.927 51.072C336.895 60.096 344.527 71.52 351.823 85.344C352.111 85.824 352.687 86.88 353.551 88.512C354.415 90.144 355.663 91.968 357.295 93.984C358.639 95.616 360.511 96.432 362.911 96.432C366.943 96.432 368.959 93.936 368.959 88.944L368.239 35.376C368.239 33.744 367.711 32.4 366.655 31.344C365.599 30.192 364.447 29.616 363.199 29.616C360.031 29.616 358.063 31.44 357.295 35.088V36.24L358.015 48.048C358.591 56.976 358.927 67.344 359.023 79.152C354.223 69.072 347.311 58.464 338.287 47.328C334.543 42.528 331.663 39.216 329.647 37.392C327.631 35.472 325.903 34.512 324.463 34.512C321.775 34.512 320.047 35.808 319.279 38.4C318.799 40.416 318.559 43.2 318.559 46.752V51.504L317.407 91.824C317.503 93.072 317.983 94.128 318.847 94.992C319.807 95.76 320.863 96.144 322.015 96.144C324.991 96.144 326.671 94.848 327.055 92.256C327.151 91.872 327.199 90.864 327.199 89.232L328.927 51.072Z"
+                    stroke="black" stroke-width="5" stroke-linecap="square" />
+                <path
+                    d="M420.285 29.04C419.805 29.04 419.181 29.28 418.413 29.76C416.973 30.528 414.765 33.216 411.789 37.824L407.325 45.024L401.853 53.376C400.413 51.264 398.541 48.192 396.237 44.16C390.573 34.464 387.069 29.616 385.725 29.616C383.805 29.616 382.173 30.624 380.829 32.64C380.253 33.504 379.965 34.272 379.965 34.944C379.965 35.52 380.109 36.048 380.397 36.528C387.021 48.624 392.397 57.36 396.525 62.736C396.813 65.328 396.957 67.872 396.957 70.368L396.813 85.92C396.813 91.2 397.341 94.368 398.397 95.424C398.781 95.808 399.405 96 400.269 96C403.245 96 405.021 94.752 405.597 92.256C406.173 89.76 406.461 84.192 406.461 75.552V63.024C407.805 60.72 409.293 58.512 410.925 56.4L416.397 48.192L420.141 42.432C422.733 38.208 424.029 34.896 424.029 32.496C424.029 30.48 422.781 29.328 420.285 29.04Z"
+                    stroke="black" stroke-width="5" stroke-linecap="square" />
+                <path
+                    d="M483.264 6.288C483.264 3.696 481.92 2.4 479.232 2.4C477.408 2.4 475.824 2.88 474.48 3.84C473.136 4.8 472.464 6.192 472.464 8.01601L471.6 52.944C471.6 66.672 472.224 80.112 473.472 93.264C473.664 95.472 474.816 96.576 476.928 96.576C479.04 96.576 480.864 96.192 482.4 95.424C483.84 94.56 484.512 93.36 484.416 91.824C483.264 78 482.688 64.752 482.688 52.08C490.368 53.232 498.096 53.808 505.872 53.808C508.944 53.808 512.112 53.712 515.376 53.52L514.8 91.68C514.8 94.464 515.952 95.856 518.256 95.856C522.768 95.856 525.12 94.464 525.312 91.68C525.792 77.568 526.032 65.952 526.032 56.832V5.856C526.032 2.4 524.592 0.671997 521.712 0.671997C519.888 0.671997 518.4 0.959999 517.248 1.536C516.192 2.016 515.52 2.64 515.232 3.408C515.04 4.176 514.944 5.664 514.944 7.872V21.552C514.944 25.776 515.04 32.784 515.232 42.576C514.08 42.672 510.096 42.72 503.28 42.72C496.752 42.72 489.888 42.096 482.688 40.848L483.264 6.288Z"
+                    stroke="black" stroke-width="5" stroke-linecap="square" />
+                <path
+                    d="M581.007 38.544C581.007 35.76 579.231 33.552 575.679 31.92C572.127 30.192 567.087 29.328 560.559 29.328C553.839 29.328 548.223 30.96 543.711 34.224C539.103 37.392 536.799 41.232 536.799 45.744C536.799 50.16 538.047 53.616 540.543 56.112C542.847 58.416 545.823 60.096 549.471 61.152L554.799 62.448C558.831 63.312 561.999 64.176 564.303 65.04C566.703 65.808 568.719 66.96 570.351 68.496C571.983 70.032 572.799 72.096 572.799 74.688C572.799 77.952 571.647 80.592 569.343 82.608C567.135 84.624 564.015 85.632 559.983 85.632C557.583 85.632 551.919 83.856 542.991 80.304C542.415 80.112 541.983 80.016 541.695 80.016C540.447 80.016 539.343 80.592 538.383 81.744C537.423 82.8 536.943 84 536.943 85.344C536.943 88.32 539.199 90.816 543.711 92.832C548.223 94.848 553.599 95.856 559.839 95.856C566.175 95.856 571.599 94.176 576.111 90.816C580.719 87.36 583.023 82.128 583.023 75.12C583.023 72.144 582.639 69.6 581.871 67.488C581.199 65.28 580.431 63.792 579.567 63.024C578.607 62.064 577.407 61.104 575.967 60.144C574.527 58.992 571.215 57.744 566.031 56.4C560.751 55.056 556.431 53.568 553.071 51.936C549.423 50.208 547.599 48.24 547.599 46.032C547.599 43.824 549.087 42 552.063 40.56C555.039 39.024 557.919 38.256 560.703 38.256C563.679 38.256 566.751 39.024 569.919 40.56C573.279 42.096 575.727 42.864 577.263 42.864C578.127 42.864 578.943 42.48 579.711 41.712C580.575 40.848 581.007 39.792 581.007 38.544Z"
+                    stroke="black" stroke-width="5" stroke-linecap="square" />
+                <path
+                    d="M597.479 96C598.919 96 600.311 95.52 601.655 94.56C602.999 93.504 603.719 92.4 603.815 91.248C604.199 86.256 604.391 70.656 604.391 44.448C604.391 38.496 604.343 34.992 604.247 33.936C604.151 32.4 603.575 31.248 602.519 30.48C601.559 29.808 600.359 29.472 598.919 29.472C597.479 29.472 596.279 29.904 595.319 30.768C594.455 31.536 594.023 32.592 594.023 33.936L593.447 92.544C593.447 94.848 594.791 96 597.479 96Z"
+                    stroke="black" stroke-width="5" stroke-linecap="square" />
+                <path
+                    d="M626.192 92.112C626.672 87.696 628.304 80.4 631.088 70.224C636.272 71.568 643.04 72.24 651.392 72.24L656.432 91.968C657.104 94.656 659.024 96 662.192 96C663.44 96 664.496 95.616 665.36 94.848C666.224 94.08 666.656 93.12 666.656 91.968C664.064 80.736 661.856 71.904 660.032 65.472C658.112 58.656 655.568 51.792 652.4 44.88C649.232 38.064 647.168 33.888 646.208 32.352C645.056 30.528 643.712 29.616 642.176 29.616C639.2 29.616 636.224 32.256 633.248 37.536C629.984 43.2 627.2 49.824 624.896 57.408C619.328 74.688 616.544 86.208 616.544 91.968C616.544 94.464 618.032 95.712 621.008 95.712C624.08 95.712 625.808 94.512 626.192 92.112ZM641.744 42.864C644.528 48.72 646.928 55.296 648.944 62.592C643.184 62.592 638.192 62.016 633.968 60.864C635.984 54.144 638.576 48.144 641.744 42.864Z"
+                    stroke="black" stroke-width="5" stroke-linecap="square" />
+            </svg>
+            <h1>夏銘源</h1>
+        </div>
+    </div>
+
+    <section class="fullpage-container">
+
+        <section>
+            <div class="middle-index">
+                <div class="about-me">
+
+                    <div class="about-me-h1-container">
+
+
+                        <h1>About Me</h1>
+                        <ul style="color: #fbff00">
+                            <li>夏</li>
+                            <li>銘</li>
+                            <li>源</li>
+                        </ul>
+
+                    </div>
+                    <div class="links-about-me">
+                        <a href="https://www.github.com/ahsia3" target="_blank"><img src="./images/github.png"
+                                alt="github" width="40px" height="40px"></a>
+                        <a href="https://www.linkedin.com/in/anthonyhsia22/" target="_blank"><img
+                                src="./images/linkedin.png" alt="github" width="40px" height="40px"></a>
+                    </div>
+
+                </div>
+                <div class="about-me-content">
+                    <div class="about-me-content-school bg-tri">
+                        <h2>Passions</h2>
+                        <ul>
+                            <li><b>Games</b></li>
+                            <li>+Legend of Zelda Series</li>
+                            <li>+League of Legends</li>
+                            <li>+Risk of Rain Series</li>
+                            <li>+Stardew Valley</li>
+                            <li>+Pokémon Series</li>
+                            <li>+Animal Crossing</li>
+                            <li>+Bloons TD Series</li>
+                            <li>+Minecraft</li>
+                            <li>+Smite</li>
+                            <li>? Ghost of Tsushima ?</li>
+                            <br />
+                            <li>+ more</li>
+                        </ul>
+
+                        <ul>
+                            <li><b>Game Developer</b></li>
+                            <li>Inventing and producing fun games</li>
+                        </ul>
+                        <ul>
+                            <li><b>Web Developer</b></li>
+                            <li>Designing stunning interactive responsive websites</li>
+                        </ul>
+
+                    </div>
+                    <div class="about-me-content-school bg-duo">
+                        <h2>Education</h2>
+                        <ul>
+                            <li>
+                                <h3>Georgia State University</h3>
+                            </li>
+                            <li><b>Magna Cum Laude</b></li>
+                            <li>2015-2019</li>
+                            <li>Bachelor of Science in <b>Computer Science </b></li>
+                            <li>Concentration in <b>Graphics/Human-Comp Interact</b></li>
+                            <li>Minor in <b>Game Design & Development</b></li>
+
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <h3>Collegiate E-Sports</h3>
+                            </li>
+                            <li>2017-2019</li>
+                            <li>
+                                <br />
+                            </li>
+                            <li>
+                                <p>One of few amongst a handful to be selected on a respective collegiate esports team,
+                                    recognized as an esports athlete representing GSU with scholarship.
+                                </p>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li>
+                                <h3>Comp Sci Classes</h3>
+                            </li>
+                            <li>Principles of Computer Programming I & II</li>
+                            <li>Theoreticals Foundations of Comp Sci</li>
+                            <li>Data Structures</li>
+                            <li>Computer Org & Programming</li>
+                            <li>System-Level Programming</li>
+                            <li>Computer Architecture</li>
+                            <li>Programming Language Concepts</li>
+                            <li>Introduction to Robotics</li>
+                            <li>Design & Analysis: Algorithms</li>
+                            <li>Fundamentals of Game Design</li>
+                            <li>Software Engineering</li>
+                            <li>Windowing Systems Programming</li>
+                            <li>Interactive Computer Graphics</li>
+                            <li>Software Security</li>
+                            <li>Computer Animation</li>
+                            <li>Intro to Computer Vision</li>
+                        </ul>
+                    </div>
+                    <div class="about-me-content-school  bg-tri">
+                        <h2>Skills</h3>
+                            <ul>
+                                <li><b>Languages</b></li>
+                                <li>Java <i>(Proficient)</i></li>
+                                <li>HTML5/CSS3 <i>(Proficient)</i></li>
+                                <li>JavaScript</li>
+                                <li>C#</li>
+                                <li>SQL</li>
+                                <li>Python</li>
+                                <li>R</li>
+                            </ul>
+
+                            <ul>
+                                <li><b>Programs</b></li>
+                                <li>Unix</li>
+                                <li>Eclipse</li>
+                                <li>GitHub</li>
+                                <li>Git</li>
+                                <li>Unity</li>
+                                <li>Unreal Engine</li>
+                                <li>Visual Studio</li>
+                                <li>Netbeans</li>
+                                <li>Blender</li>
+                                <li>React</li>
+                            </ul>
+                    </div>
+                    <div class="about-me-content-school bg-duo">
+                        <h2>Notable Achievements and Additional Experience</h3>
+                            <ul>
+                                <li><b>CIW Site Development Associate</b></li>
+                                <li>2015</li>
+                                <li>Certified web professional by completing web development course</li>
+                            </ul>
+                            <ul>
+                                <li><b>President's List</b></li>
+                                <li>Spring 2017</li>
+                                <li>Maintaining 4.0 GPA or above</li>
+                            </ul>
+                            <ul>
+                                <li><b>Dean's List</b></li>
+                                <li>2015 - 2016, Fall 2017 - 2019</li>
+                                <li>Maintaining 3.5 GPA or above</li>
+                            </ul>
+                            <ul>
+                                <li><b>PantherHackers</b></li>
+                                <li>2015 - 2017</li>
+                                <li>CS student organization in which I learned more about programming</li>
+                            </ul>
+                            <ul>
+                                <li><b>GSU Esports Varsity</b></li>
+                                <li>2017 - 2019</li>
+                                <li>Competitive atmosphere that exhibits teamwork shown throughout tournaments to
+                                    achieve 6 first place titles as well as a 4th place finish in the nation.</li>
+                                <li><br />
+                                    <div class="gallery-esports">
+                                        <div class="img-container">
+                                            <img src="./images/smite1.jpg" alt="GSU E-Sports @MomoCon 2018 @Curtis"
+                                                data-original="smite1.jpg">
+                                        </div>
+                                        <div class="img-container">
+                                            <img id="third" src="./images/smite2.jpg"
+                                                alt="GSU E-Sports @MomoCon 2018 @Praful" data-original="smite2.jpg">
+                                        </div>
+                                        <div class="img-container">
+                                            <img src="./images/smite3.jpg" alt="GSU E-Sports Team @MomoCon 2018 "
+                                                data-original="smite3.jpg">
+                                        </div>
+                                        <div class="img-container">
+                                            <img src="./images/smite4.jpg" alt="GSU E-Sports @MomoCon 2018 @Lieu"
+                                                data-original="smite4.jpg">
+                                        </div>
+                                        <div class="img-container">
+                                            <img src="./images/smite5.jpg"
+                                                alt="GSU E-Sports @MomoCon 2018 @Curtis and I"
+                                                data-original="smite5.jpg">
+                                        </div>
+                                        <div class="img-container">
+                                            <img src="./images/smite6.jpg"
+                                                alt="GSU E-Sports @MomoCon 2018 @Andrew and I"
+                                                data-original="smite6.jpg">
+                                        </div>
+                                        <div class="img-container">
+                                            <img src="./images/smite7.jpg"
+                                                alt="GSU E-Sports @MomoCon 2018 2 First Places"
+                                                data-original="smite7.jpg">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="fullpage-container-after">
+
+        <div class="simple-container">
+            <p>Made possible using <b>HTML5</b> / <b>CSS3</b> / <b>Vanilla JS</b><br />
+                No <b style="color: rgb(192, 6, 6);">libraries</b> required.</p>
+        </div>
+
+        <div class="gallery">
+            <div class="img-container">
+                <img width="258px" height="258px" src="./images/me_grad_better_edited_tree.png"
+                    alt="GSU Graduation day May 2019" data-original="me_grad_better_edited_tree.png">
+            </div>
+            <div class="img-container">
+                <img src="./images/AH.png" alt="@Athens, GA" data-original="AH.png">
+            </div>
+        </div>
+        <div class="simple-container" style="background-color: grey; color: white">
+            <p>Please <b>hire me</b></p>
+        </div>
+
+        <section>
+            <div class="modal">
+                <img src="#" alt="" class="full-img">
+                <p class="caption"></p>
+            </div>
+        </section>
+
+        <section>
+            <div class="middle-index">
+
+                <div class="about-me-content-projects">
+                    <div class="about-me-content-school-projects bg-tri" id="_2016">
+                        <ul>
+                            <li>
+                                <h2>MazeRunner</h2>
+                            </li>
+                            <li>2016</li>
+                        </ul>
+                        <ul>
+                            <li><b>What</b></li>
+                            <li>Program that generates a random maze and solves it using DFS algorithm.</li>
+                        </ul>
+
+                        <ul>
+                            <li><b>Where</b></li>
+                            <li>GSU</li>
+                            <li>CSc 2720 Data Structures</li>
+                        </ul>
+                        <ul>
+                            <li><b>How</b></li>
+                            <li>Eclipse</li>
+                            <li>Java</li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <a target="_blank" href="https://github.com/ahsia3/MazeRunner"><img
+                                        src="./images/link_go.png" alt="link" height="20px" width="20px"></a></li>
+                        </ul>
+                    </div>
+                    <div class="about-me-content-school bg-duo">
+                        <ul>
+                            <li>
+                                <h2>WASDodge</h2>
+                            </li>
+                            <li>2017</li>
+                        </ul>
+                        <ul>
+                            <li><b>What</b></li>
+                            <li>A java based game about dodging blocks</li>
+                        </ul>
+
+                        <ul>
+                            <li><b>When</b></li>
+                            <li>Summer</li>
+                        </ul>
+                        <ul>
+                            <li><b>How</b></li>
+                            <li>Eclipse</li>
+                            <li>Java</li>
+                        </ul>
+                        <ul>
+                            <li><a target="_blank" href="https://github.com/ahsia3/Java-Based-Game"><img
+                                        src="./images/link_go.png" alt="link" height="20px" width="20px"></a></li>
+                        </ul>
+                    </div>
+                    <div class="about-me-content-school-projects bg-tri" id="_2017">
+                        <ul>
+                            <li>
+                                <h2>chainVote</h2>
+                            </li>
+                            <li>2017</li>
+                            <li><b><i>Honorable Mention</i></b></li>
+                        </ul>
+                        <ul>
+                            <li><b>What</b></li>
+                            <li>Using blockchain technology to let voters vote on what their representatives in
+                                government positions should support.</li>
+                        </ul>
+
+                        <ul>
+                            <li><b>Where</b></li>
+                            <li>HackGSU</li>
+                        </ul>
+                        <ul>
+                            <li><b>How</b></li>
+                            <li>Eclipse</li>
+                            <li>Java</li>
+                            <li>Docker</li>
+                            <li>Gradle</li>
+                            <li>SoapUI</li>
+                            <li>Hyperledger Fabric framework</li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <a target="_blank" href="https://github.com/ahsia3/chainVote"><img
+                                        src="./images/link_go.png" alt="link" height="20px" width="20px"></a></li>
+                        </ul>
+                    </div>
+                    <div class="about-me-content-school-projects bg-duo" id="_2018">
+                        <ul>
+                            <li>
+                                <h2>TheLostCore</h2>
+                            </li>
+                            <li>2018</li>
+                        </ul>
+                        <ul>
+                            <li><b>What</b></li>
+                            <li>A turn-based RPG game project.</li>
+                        </ul>
+
+                        <ul>
+                            <li><b>Where</b></li>
+                            <li>GSU</li>
+                            <li>CSc 4821 Game Design</li>
+                        </ul>
+                        <ul>
+                            <li><b>How</b></li>
+                            <li>Unity</li>
+                            <li>C#</li>
+
+                        </ul>
+                        <ul>
+                            <li><a target="_blank" href="https://github.com/ahsia3/TheLostCore"><img
+                                        src="./images/link_go.png" alt="link" height="20px" width="20px"></a></li>
+                        </ul>
+                    </div>
+                    <div class="about-me-content-school-projects bg-tri">
+                        <ul>
+                            <li>
+                                <h2>ForgeClicker</h2>
+                            </li>
+                            <li>2018</li>
+                        </ul>
+                        <ul>
+                            <li><b>What</b></li>
+                            <li>A clicker game where the user clicks on an object to accumulate currency to establish
+                                automated currency to keep stacking the currency.</li>
+                        </ul>
+
+                        <ul>
+                            <li><b>When</b></li>
+                            <li>Summer</li>
+                        </ul>
+                        <ul>
+                            <li><b>How</b></li>
+                            <li>Unity</li>
+                            <li>C#</li>
+
+                        </ul>
+                        <ul>
+                            <li><a target="_blank" href="https://github.com/ahsia3/ForgeClicker"><img
+                                        src="./images/link_go.png" alt="link" height="20px" width="20px"></a></li>
+                        </ul>
+                    </div>
+                    <div class="about-me-content-school-projects bg-duo">
+                        <ul>
+                            <li>
+                                <h2>SuperSurvivor</h2>
+                            </li>
+                            <li>2018</li>
+                        </ul>
+                        <ul>
+                            <li><b>What</b></li>
+                            <li>A story-based game where user will be able to select from a set amount of choices to
+                                lead them further into the game.</li>
+                        </ul>
+
+                        <ul>
+                            <li><b>Where</b></li>
+                            <li>GSU</li>
+                            <li>CSc 4380 Windowing Systems Programming</li>
+                        </ul>
+                        <ul>
+                            <li><b>How</b></li>
+                            <li>Netbeans</li>
+                            <li>Java</li>
+                            <li>SQLite3</li>
+
+                        </ul>
+                        <ul>
+                            <li><a target="_blank" href="https://github.com/ahsia3/SuperSurvivor_V1"><img
+                                        src="./images/link_go.png" alt="link" height="20px" width="20px"></a></li>
+                        </ul>
+                    </div>
+                    <div class="about-me-content-school-projects bg-tri">
+                        <ul>
+                            <li>
+                                <h2>SecureSay</h2>
+                            </li>
+                            <li>2018</li>
+                        </ul>
+                        <ul>
+                            <li><b>What</b></li>
+                            <li>Messaging client that uses cryptography on messages to keep them safe and secure as well
+                                as developing our own server using socket programming.</li>
+                        </ul>
+
+                        <ul>
+                            <li><b>Where</b></li>
+                            <li>GSU</li>
+                            <li>CSc 4350 Software Engineering</li>
+                        </ul>
+                        <ul>
+                            <li><b>How</b></li>
+                            <li>Python</li>
+                            <li>SQLite3</li>
+
+                        </ul>
+                        <ul>
+                            <li><a target="_blank" href="https://github.com/ahsia3/SecureSay"><img
+                                        src="./images/link_go.png" alt="link" height="20px" width="20px"></a></li>
+                        </ul>
+                    </div>
+                    <div class="about-me-content-school-projects bg-duo" id="_2019">
+                        <ul>
+                            <li>
+                                <h2>Pizza</h2>
+                            </li>
+                            <li>2019</li>
+                            <li><b><i>People's Choice Award Winner</i></b></li>
+                        </ul>
+                        <ul>
+                            <li><b>What</b></li>
+                            <li>3D animation developed in Blender about two brothers and a pizza.</li>
+                        </ul>
+
+                        <ul>
+                            <li><b>Where</b></li>
+                            <li>GSU</li>
+                            <li>CSc 4821 Game Design</li>
+                        </ul>
+                        <ul>
+                            <li><b>How</b></li>
+                            <li>Blender</li>
+
+                        </ul>
+                        <ul>
+                            <li><a target="_blank" href="https://youtu.be/JRy1KiObILg"><img src="./images/link_go.png"
+                                        alt="link" height="20px" width="20px"></a></li>
+                        </ul>
+                    </div>
+                    <div class="about-me-content-school-projects bg-tri">
+                        <ul>
+                            <li>
+                                <h2>WARPPA</h2>
+                            </li>
+                            <li>2019</li>
+                        </ul>
+                        <ul>
+                            <li><b>What</b></li>
+                            <li>Designed a card game in Unity that integrates Twitch IRC (Internet Relay Chat) to allow
+                                users in chat to bet numbers every round to win based on the value of the card.</li>
+                        </ul>
+
+                        <ul>
+                            <li><b>When</b></li>
+                            <li>Summer</li>
+                        </ul>
+                        <ul>
+                            <li><b>How</b></li>
+                            <li>Unity</li>
+                            <li>C#</li>
+
+                        </ul>
+                        <ul>
+                            <li><a target="_blank" href="https://www.youtube.com/watch?v=eXq-AfCrJNY"><img
+                                        src="./images/link_go.png" alt="link" height="20px" width="20px"></a></li>
+                        </ul>
+                    </div>
+                    <div class="about-me-content-school-projects bg-duo" id="_2020">
+                        <ul>
+                            <li>
+                                <h2>Twitch_bot</h2>
+                            </li>
+                            <li>2019</li>
+                        </ul>
+                        <ul>
+                            <li><b>What</b></li>
+                            <li>Developed a bot to interact with Twitch chat to provide unique commands in conjuction
+                                with SQL database for statistics using JavaScript.</li>
+                        </ul>
+
+                        <ul>
+                            <li><b>When</b></li>
+                            <li>Fall</li>
+                        </ul>
+                        <ul>
+                            <li><b>How</b></li>
+                            <li>JavaScript</li>
+                            <li>SQLite3</li>
+
+                        </ul>
+                        <ul>
+                            <li><a target="_blank" href="https://ahsia3.github.io/Twitch_bot/"><img
+                                        src="./images/link_go.png" alt="link" height="20px" width="20px"></a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+
+                <div class="about-me" style="background-image: url(./images/MazeRunner_2.PNG);" id="ProjectAboutMe">
+                    <div class="about-me-h1-container">
+                        <ul style="color: #fbff00;">
+                            <li>夏</li>
+                            <li>銘</li>
+                            <li>源</li>
+                        </ul>
+                        <h1>Projects</h1>
+                    </div>
+                    <div class="button-group">
+                        <button type="button" onclick="smoothScroll(document.getElementById('_2016'))">First</button>
+                        <button type="button" onclick="smoothScroll(document.getElementById('_2017'))">2017</button>
+                        <button type="button" onclick="smoothScroll(document.getElementById('_2018'))">2018</button>
+                        <button type="button" onclick="smoothScroll(document.getElementById('_2019'))">2019</button>
+                        <button type="button" onclick="smoothScroll(document.getElementById('_2020'))">Last</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-start">
+                <img src="./images/cr.svg" alt="copyright" width="20px" height="20px">
+                <h3>AH 2020</h3>
+            </div>
+            <div class="link-content">
+                <a href="https://www.github.com/ahsia3" target="_blank"><img src="./images/github.png" alt="github"
+                        width="50px" height="50px"></a>
+                <a href="https://www.linkedin.com/in/anthonyhsia22/" target="_blank"><img src="./images/linkedin.png"
+                        alt="github" width="50px" height="50px"></a>
+            </div>
+        </footer>
+    </section>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
