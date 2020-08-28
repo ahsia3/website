@@ -271,7 +271,7 @@ MIDDLE INDEX
 }
 
 .about-me h1 {
-  font-size: 5rem;
+  font-size: 1rem;
   font-family: caviarBold;
   text-align: center;
   letter-spacing: 10px;
@@ -289,7 +289,7 @@ MIDDLE INDEX
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 10px solid white;
+  border: 1px solid white;
   padding: 2rem;
   flex-direction: row;
   width: 80%;
@@ -317,7 +317,15 @@ MIDDLE INDEX
   height: 100vh;
   font-family: caviar;
 }
+.about-me-content-school h2,
+.about-me-content-school-projects h2 {
+  font-size: 12px;
+}
 
+.about-me-content-school,
+.about-me-content-school-projects {
+  font-size: 12px;
+}
 .about-me-content-school ul,
 .about-me-content-school h2,
 .about-me-content-school-projects ul,
@@ -502,4 +510,22 @@ Simple Page
 .simple-container p {
   font-family: simplicity;
   font-size: 20px;
+}
+
+@media (min-width: 700px) {
+  .about-me-content-school h2,
+  .about-me-content-school-projects h2 {
+    font-size: 25px;
+  }
+
+  .about-me-content-school,
+  .about-me-content-school-projects {
+    font-size: 14px;
+  }
+  .about-me-h1-container h1 {
+    font-size: 5rem;
+  }
+  .about-me-h1-container {
+    border: 10px solid white;
+  }
 }
