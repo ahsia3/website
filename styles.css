@@ -515,11 +515,33 @@ Simple Page
   align-items: center;
   height: 50vh;
   text-align: center;
+  flex-direction: column;
 }
 
 .simple-container p {
   font-family: simplicity;
+  font-size: 25px;
+}
+
+.simple-container div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+  height: 50%;
+}
+
+.simple-container ul {
+  list-style-type: none;
   font-size: 20px;
+}
+
+.simple-container a {
+  text-decoration: none;
+  color: white;
+}
+.simple-container a:hover {
+  color: rgb(68, 245, 245);
 }
 
 @media (min-width: 700px) {
